@@ -18,13 +18,13 @@ int colors;
 typedef struct{
 int row;
 int col;
-}boardIndex;
+} boardIndex;
 
 typedef struct{
 char item;
 bool isVisited;
 bool completeCol;
-}gamePiece;
+} gamePiece;
 
 gameBoard setDifficulty();
 gamePiece** createBoard(gameBoard);

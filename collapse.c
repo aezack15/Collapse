@@ -13,9 +13,11 @@ int main(){
 		gamePiece** board=createBoard(gb);
 		bool stillHaveMoves=true;
 		displayBoard(gb.rows,gb.cols,board,score);
-			while(stillHaveMoves==true){
+			while(stillHaveMoves==true)
+    			{
 				boardIndex bi=getMove(gb.rows,gb.cols,board);
-				while(legalMove(board,bi,gb)==false){
+				while(legalMove(board,bi,gb)==false)
+    				{
 					printf("Invalid move\n");
 					bi=getMove(gb.rows,gb.cols,board);
 				}
@@ -28,7 +30,8 @@ int main(){
 				stillHaveMoves=anyMoveRemaining(board,gb);
 			}
 			playAgain=anotherTry(board,gb);
-			if(playAgain==true){
+			if(playAgain==true)
+    			{
 				free(board);
 			}
 		stillHaveMoves=playAgain;
